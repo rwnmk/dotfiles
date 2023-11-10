@@ -1,0 +1,6 @@
+#!/usr/bin/env
+
+typeset -U path PATH
+path=(~/bin $path)
+export PATH
+. "$HOME/.cargo/env"

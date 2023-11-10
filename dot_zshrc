@@ -1,0 +1,38 @@
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle :compinstall filename '/home/rowan/.zshrc'
+fpath+=~/.zfunc
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/etc/zhistory
+HISTSIZE=10000
+SAVEHIST=100000
+setopt autocd extendedglob notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+. ~/etc/catppuccin_mocha-zsh-syntax-highlighting.zsh
+. /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+alias xq='sudo xbps-query -Rs '
+alias xi='sudo xbps-install -S '
+alias xu='sudo xbps-install -Su'
+alias xr='sudo xbps-remove '
+alias ls='exa'
+alias ll='exa -al'
+
+# must be at the end!!!
+. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
